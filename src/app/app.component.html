@@ -1,22 +1,47 @@
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-    <p>Auto-resizing sidenav</p>
-    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-    <button (click)="showFiller = !showFiller" mat-raised-button>
-      Toggle extra text
-    </button>
+<mat-drawer-container autosize>
+  <mat-drawer #drawer mode="side">
+
+    <div class="sidebar-container">
+      <div>
+          <h2>Welcome Professor</h2>
+          <img class="sidebar-logo" src="./assets/HAL9000.png" width="45px" />              
+      </div>
+      <div>
+          <button class="sidebar-close" (click)="drawer.toggle()" mat-raised-button>
+            Close
+          </button>    
+      </div>
+
+    </div>
+
   </mat-drawer>
 
-  <div class="example-sidenav-content">
+  <div>
 
     <mat-toolbar>
-      Romel Gomez
-      
+      <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>My Resume</button>
+        <button mat-menu-item (click)="drawer.toggle()">Login</button>
+      </mat-menu>
+      <span class="toolbar-site-title">
+        <img class="circular-square toolbar-logo" src="./assets/blogLogo.jpg" width="18px" />
+        Romel Gomez - Frontend Web Developer 
+      </span>      
     </mat-toolbar>
 
-    <button type="button" mat-button (click)="drawer.toggle()">
-      Toggle sidenav
-    </button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
   </div>
 

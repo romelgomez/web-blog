@@ -1,3 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
+
+.circular-square {
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 0;
+}
+
+.toolbar-logo {
+    padding-right: 5px;
+}
+
+.sidebar-container {
+    margin-right: 5px;    
+}
+
+.sidebar-logo {
+    display:block;
+    margin:auto;
+}
+
+.sidebar-close {
+    margin-top: 10px;
+    display:block;
+    margin:auto;
+}
+
+.toolbar-site-title {
+    margin-left: 10px;    
+}
