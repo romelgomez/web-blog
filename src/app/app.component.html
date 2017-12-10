@@ -4,14 +4,13 @@
     <div class="sidebar-container">
       <div>
           <h2>Welcome Professor</h2>
-          <img class="sidebar-logo" src="./assets/HAL9000.png" width="45px" />              
+          <img  src="./assets/HAL9000.png" width="45px" />              
       </div>
-      <div>
-          <button class="sidebar-close" (click)="drawer.toggle()" mat-raised-button>
+      <div class="sidebar-close-button-container">
+          <button (click)="drawer.toggle()" mat-raised-button>
             Close
           </button>    
       </div>
-
     </div>
 
   </mat-drawer>
