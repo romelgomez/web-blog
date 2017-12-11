@@ -1,5 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+// https://www.materialpalette.com/
+// https://medium.com/covalent-ui/angular-material-2-theme-tutorial-2f7e6c344006 
+// https://www.materialpalette.com/deep-orange/green
+$primary-color-dark:   #E64A19;
+$primary-color:        #FF5722;
+$primary-color-light:  #FFCCBC;
+$primary-color-text:   #FFFFFF;
+$accent-color:         #4CAF50;
+$primary-text-color:   #212121;
+$secondary-text-color: #757575;
+$divider-color:        #BDBDBD;
+
+@import '~@angular/material/theming';
+@include mat-core();
+$primary: mat-palette($mat-orange, 800);
+$accent:  mat-palette($mat-light-blue, 600, 100, 800);
+$warn:    mat-palette($mat-red, 600);
+$theme: mat-light-theme($primary, $accent, $warn);
+
+
+@include angular-material-theme($theme);
+
+body {
+    margin: 0;
+}
 
 .circular-square {
     border-radius: 50%;
@@ -16,7 +41,7 @@
 }
 
 .sidebar-container {
-    margin-right: 5px;    
+    margin: 0 5px 0 5px;    
     text-align: center;
 }
 
@@ -29,3 +54,10 @@
     margin-top: 10px;
 }
 
+// .toolbar-icon {
+//     padding: 0 14px;
+// }
+  
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
