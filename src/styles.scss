@@ -54,10 +54,14 @@ body {
 
 .toolbar-logo {
     padding-right: 5px;
+    width: 18px;
+    height: 18px;
 }
 
 .toolbar-site-title {
-    margin-left: 10px;    
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;    
 }
 
 .sidebar-container {
@@ -65,10 +69,12 @@ body {
     text-align: center;
 }
 
-// .sidebar-logo {
-//     display:block;
-//     margin:auto;
-// }
+.sidebar-logo {
+    // display:block;
+    // margin:auto;
+    height: 45px;
+    width: 45px;
+}
 
 .sidebar-close-button-container {
     margin-top: 10px;
