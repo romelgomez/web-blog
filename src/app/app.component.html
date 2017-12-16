@@ -1,21 +1,18 @@
-<mat-drawer-container autosize>
+<mat-drawer-container autosize class="root-container">
   <mat-drawer #drawer mode="side">
 
     <div class="sidebar-container">
       <div>
-          <h2>Welcome Professor</h2>
+          <h2>Welcome</h2>
           <img class="sidebar-logo" src="./assets/HAL9000.png" />              
       </div>
-      <mat-nav-list>
-          <a mat-list-item routerLink="/my-resume" > My Resume </a>
-          <a mat-list-item routerLink="/login" > Login </a>
-      </mat-nav-list>
-      <!-- <div class="sidebar-close-button-container">
-          <button (click)="drawer.toggle()" mat-raised-button>
-            Close
-          </button>    
-      </div> -->
     </div>
+
+    <mat-nav-list>
+      <a mat-list-item routerLink="/my-resume" > My Resume </a>
+      <a mat-list-item routerLink="/login" > Login </a>
+    </mat-nav-list>
+
 
   </mat-drawer>
 

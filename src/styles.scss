@@ -5,41 +5,24 @@
 // https://www.materialpalette.com/deep-orange/green
 // https://blog.thoughtram.io/angular/2017/05/23/custom-themes-with-angular-material.html
 // https://www.youtube.com/watch?v=PsgZjFTAleI
-// $primary-color-dark:   #E64A19;
-// $primary-color:        #FF5722;
-// $primary-color-light:  #FFCCBC;
-// $primary-color-text:   #FFFFFF;
-// $accent-color:         #4CAF50;
-// $primary-text-color:   #212121;
-// $secondary-text-color: #757575;
-// $divider-color:        #BDBDBD;
+// https://stackoverflow.com/questions/43438305/how-to-change-font-color-of-primary-palette-in-angular-material2
+
+// https://www.materialpalette.com/deep-orange/green
+// $primary-color:        #FF5722; // 500
+// $primary-color-light:  #FFCCBC; // 100
+// $primary-color-dark:   #E64A19; // 700 
+// $accent-color:         #4CAF50; // 500 
+// $primary-color-text:   #FFFFFF; // white 
+// $primary-text-color:   #212121; // 900 
+// $secondary-text-color: #757575; // 600 
+// $divider-color:        #BDBDBD; // 400 
 
 @import '~@angular/material/theming';
 @include mat-core();
-// $primary: mat-palette($mat-orange, 800);
-// $accent:  mat-palette($mat-light-blue, 600, 100, 800);
-// $warn:    mat-palette($mat-red, 600);
-// $theme: mat-light-theme($primary, $accent, $warn);
 
-// $orange-app-primary: mat-palette($mat-deep-orange);
-// $orange-app-accent:  mat-palette($mat-green);
-// $orange-app-theme:   mat-light-theme($orange-app-primary, $orange-app-accent);
-
-// $primary-color-dark:   #E64A19
-// $primary-color:        #FF5722  500
-// $primary-color-light:  #FFCCBC  100
-// $primary-color-text:   #FFFFFF  White
-
-// $accent-color:         #4CAF50
-// $primary-text-color:   #212121  900
-// $secondary-text-color: #757575  600
-// $divider-color:        #BDBDBD  400
-
-$orange-app-primary: mat-palette($mat-deep-orange, 500, 100, White);
-$orange-app-accent:  mat-palette($mat-green, 500, 600, 400);
-$warn:    mat-palette($mat-red, 600);
-$orange-app-theme:   mat-light-theme($orange-app-primary, $orange-app-accent, $warn);
-
+$orange-app-primary:    mat-palette($mat-deep-orange, 500, 100, 700);
+$orange-app-accent:     mat-palette($mat-green, 500);
+$orange-app-theme:      mat-light-theme($orange-app-primary, $orange-app-accent);
 @include angular-material-theme($orange-app-theme);
 
 body {
@@ -64,6 +47,11 @@ body {
     color: white;    
 }
 
+.mat-drawer {
+    overflow: hidden;
+}
+
+
 .sidebar-container {
     margin: 0 5px 0 5px;    
     text-align: center;
@@ -86,4 +74,10 @@ body {
   
 .toolbar-spacer {
     flex: 1 1 auto;
+}
+
+ 
+
+.theme__button2 {
+    color: #fff !important; 
 }

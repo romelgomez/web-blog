@@ -4,6 +4,10 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
+// FIREBASE
+// import { AngularFireModule } from 'angularfire2';
+// import { AngularFireAuthModule } from 'angularfire2/auth';
+
 // Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
@@ -18,6 +22,7 @@ import {
 // import { FlexLayoutModule } from '@angular/flex-layout';
 
 // App
+// import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { MyResumeComponent } from './my-resume/my-resume.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -49,7 +54,10 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
-    )
+    ),
+    // AngularFireModule.initializeApp(environment.firebase),
+    // // imports firebase/auth, only needed for auth features
+    // AngularFireAuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
