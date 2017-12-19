@@ -1,0 +1,5 @@
+{
+    "myResume": {
+        "HELLO": "Hello {{ value }}, and you too: {{ name }} {{lastName}}"
+    }
+}

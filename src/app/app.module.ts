@@ -1,8 +1,17 @@
 // Angular
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule} from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+
+// Translate
+import { TranslateModule, TranslateLoader} from '@ngx-translate/core';
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 // FIREBASE
 // import { AngularFireModule } from 'angularfire2';
@@ -16,7 +25,9 @@ import {
   MatIconModule,
   MatButtonModule,
   MatMenuModule,
-  MatListModule
+  MatListModule,
+  MatCardModule,
+  MatExpansionModule
  } from '@angular/material';
 // import { CdkTableModule } from '@angular/cdk/table';
 // import { FlexLayoutModule } from '@angular/flex-layout';
@@ -51,6 +62,8 @@ const appRoutes: Routes = [
     MatButtonModule,
     MatMenuModule,
     MatListModule,
+    MatCardModule,
+    MatExpansionModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
@@ -58,6 +71,13 @@ const appRoutes: Routes = [
     // AngularFireModule.initializeApp(environment.firebase),
     // // imports firebase/auth, only needed for auth features
     // AngularFireAuthModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [ HttpClient ]
+    }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
