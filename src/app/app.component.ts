@@ -7,6 +7,8 @@ import { MatIconRegistry } from '@angular/material';
 
 import { HttpClient } from '@angular/common/http';
 
+import { TranslateService} from '@ngx-translate/core';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,12 +17,27 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
 
-  constructor(http: HttpClient, iconReg: MatIconRegistry, sanitizer: DomSanitizer) {
+  public currentLang: string;
+
+  constructor(http: HttpClient, iconReg: MatIconRegistry, sanitizer: DomSanitizer, private translate: TranslateService) {
     iconReg
     .addSvgIcon('github', sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/github.svg'))
     .addSvgIcon('google', sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/google.svg'))
     .addSvgIcon('facebook', sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/facebook.svg'))
     .addSvgIcon('twitter', sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/twitter.svg'));
+
+    // this language will be used as a fallback when a translation isn't found in the current language
+    translate.setDefaultLang('en');
+
+    // the lang to use, if the lang isn't available, it will use the current loader to get them
+    translate.use('en');
+
+    this.currentLang = 'en';
+  }
+
+  setDefaultLang (lang: string) {
+    this.translate.use(lang);
+    this.currentLang = lang;
   }
 
 }
