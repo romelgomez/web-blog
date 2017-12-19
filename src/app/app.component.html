@@ -1,14 +1,14 @@
 <mat-drawer-container autosize class="root-container">
-  <mat-drawer #drawer mode="side">
+  <mat-drawer #drawer mode="side" class="sidebar-root-container">
 
     <div class="sidebar-container">
       <div>
-          <h2>Welcome</h2>
+          <!-- <h2>Welcome</h2> -->
           <img class="sidebar-logo" src="./assets/HAL9000.png" />              
       </div>
     </div>
 
-    <mat-nav-list>
+    <mat-nav-list class="sidebar-mat-nav-list">
       <a mat-list-item routerLink="/my-resume" > My Resume </a>
       <a mat-list-item routerLink="/login" > Login </a>
     </mat-nav-list>
@@ -25,12 +25,21 @@
         <button mat-menu-item>My Resume</button>
         <button mat-menu-item (click)="drawer.toggle()">Login</button>
       </mat-menu> -->
+
       <a routerLink="/" routerLinkActive="active" class="toolbar-site-title">
-        <span>
-            <img class="circular-square toolbar-logo" src="./assets/blogLogo.jpg"/>
-              Romel Gomez - Web Developer 
-          </span>   
+        <button mat-button>
+          Romel Gomez - Web Developer 
+          <mat-icon>devices</mat-icon>
+          <!-- <img class="circular-square toolbar-logo" src="./assets/blogLogo.jpg"/> -->
+        </button>
       </a>
+
+      
+      <!-- <img class="circular-square toolbar-logo" src="./assets/blogLogo.jpg"/> -->
+      <!-- <a routerLink="/" routerLinkActive="active" class="toolbar-site-title">
+        Romel Gomez - Web Developer 
+        <mat-icon style="vertical-align: text-top;">devices</mat-icon>
+      </a> -->
 
 
       <span class="toolbar-spacer"></span>
