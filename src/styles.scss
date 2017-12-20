@@ -96,3 +96,15 @@ body {
 .theme__button2 {
     color: #fff !important; 
 }
+
+
+@media screen and (max-width: 812px) {
+    .toolbar-site-title > button:first-of-type {
+        display: none;
+    }
+}
+@media screen and (min-width:813px) {
+    .toolbar-site-title > button:last-of-type {
+        display: none;
+    }
+}
