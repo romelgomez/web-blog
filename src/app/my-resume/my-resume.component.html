@@ -8,42 +8,90 @@
     <img mat-card-image src="/assets/surf.jpg" alt="Photo of surfboard">
     <mat-card-content>
   
-      <p>
+      <!-- <p>
           {{ 'myResume.HELLO' | translate:param }}
       </p>
-  
+   -->
       <p>
-        As web developer, the part that I most enjoy is write code. Currently, I into pick up Angular Mayor Version which is 5.x, RxJS, and Material. And at some point, I write code to use AngularJS 1.x, Algolia, Cloudinary, Node, Express, Firebase, Gulp, TypeScript, Bootstrap, jQuery, CakePHP 2.x, Openshift, GoLang, PHP, JAVA, MySql, Google App Engine for JAVA, Spring MVC 3.X, 2checkout.com
+        Hi there! I’m Romel. And I see my self as web developer, programer. Currently, I into pick up Angular 5.x, RxJS, and Material. And at some point, I write code to use AngularJS 1.x, Algolia, Cloudinary, Node, Express, Firebase, Gulp, TypeScript, Bootstrap, jQuery, CakePHP 2.x, Openshift, GoLang, PHP, JAVA, MySql, Google App Engine for JAVA, Spring MVC 3.X, 2checkout.
       </p>
   
       <mat-accordion>
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title>
-              Education
+              <!-- <mat-icon>school</mat-icon> -->
+               Education
             </mat-panel-title>
             <mat-panel-description>
               Very formal
             </mat-panel-description>
           </mat-expansion-panel-header>
       
-  
-          University: Degree in Professor of Informatics in the Universidad Pedagógica Experimental Libertador of Venezuela							
-          Secondary school specializing in science
+          <div>
+            <b>University:</b> Degree in Professor of Informatics in the Universidad Pedagógica Experimental Libertador of Venezuela							
+          </div>
            
   
         </mat-expansion-panel>
-        <mat-expansion-panel (opened)="panelOpenState = true"
-                             (closed)="panelOpenState = false">
+        <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title>
-              Self aware panel
+              Repositories               
             </mat-panel-title>
             <mat-panel-description>
-              Currently I am {{panelOpenState ? 'open' : 'closed'}}
+              0101101
             </mat-panel-description>
           </mat-expansion-panel-header>
-          <p>I'm visible because I am open</p>
+      
+          <div>
+            <b>GitHub:</b> <a href="https://github.com/romelgomez" target="_blank">https://github.com/romelgomez</a>
+          </div>
+          <div>
+            <b>Bitbucket:</b> <a href="https://bitbucket.com/romelgomez" target="_blank">https://bitbucket.org/romelgomez/</a>
+          </div>           
+  
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <!-- <mat-icon>business_center</mat-icon> -->
+              
+              Formal Jobs               
+            </mat-panel-title>
+            <mat-panel-description>
+              
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+      
+          <div>
+            <b>(2011 - 2017) Laboratory assistant</b> in the english department of the Universidad Pedagógica Experimental Libertador
+          </div>
+          <div>
+            <b>(2005 - 2006) Assistant and Technical Support</b> - 3 months - Kavak Group Computer Store, C.A. Rif.: J-31636746-0
+          </div>           
+          <div>
+            <b>(2003 - 2004)  Assistant Mechanical</b> - 7 months - Tiuna S.A - Rectification of Motors.
+          </div>
+          
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Courses
+            </mat-panel-title>
+            <mat-panel-description>
+              
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <div>
+            ( 2003 ) - 632 Hours - Diesel Engine Repair Mechanic 
+          </div>
+          <div>
+            ( 2011 ) - 32 Hours - Basic Programming - Intermediate and OOP 
+          </div>           
+
         </mat-expansion-panel>
       </mat-accordion>
   

@@ -29,8 +29,8 @@ import {
   MatCardModule,
   MatExpansionModule
  } from '@angular/material';
-// import { CdkTableModule } from '@angular/cdk/table';
-// import { FlexLayoutModule } from '@angular/flex-layout';
+import { CdkTableModule } from '@angular/cdk/table';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 // App
 // import { environment } from '../environments/environment';
@@ -64,6 +64,8 @@ const appRoutes: Routes = [
     MatListModule,
     MatCardModule,
     MatExpansionModule,
+    CdkTableModule,
+    FlexLayoutModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only

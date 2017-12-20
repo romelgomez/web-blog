@@ -24,7 +24,9 @@ export class AppComponent {
     .addSvgIcon('github', sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/github.svg'))
     .addSvgIcon('google', sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/google.svg'))
     .addSvgIcon('facebook', sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/facebook.svg'))
-    .addSvgIcon('twitter', sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/twitter.svg'));
+    .addSvgIcon('twitter', sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/twitter.svg'))
+    .addSvgIcon('uk', sanitizer.bypassSecurityTrustResourceUrl('./assets/flags/united-kingdom.svg'))
+    .addSvgIcon('venezuela', sanitizer.bypassSecurityTrustResourceUrl('./assets/flags/venezuela.svg'));
 
     // this language will be used as a fallback when a translation isn't found in the current language
     translate.setDefaultLang('en');
