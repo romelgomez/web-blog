@@ -15,3 +15,34 @@
 .resume-select-description{
     margin-top: 3px;
 }
+
+.my-resume-start {
+    text-align: center;
+    line-height: 200%;
+    font-family: 'Bellefair', serif;
+    font-size: x-large;
+}
+
+.my-resume-actions {
+    text-align: center;
+}
+
+.get-in-touch-button {
+    height: 70px;
+}
+
+.mat-button, .mat-fab, .mat-icon-button, .mat-mini-fab, .mat-raised-button {
+    font-family: 'Bad Script', cursive !important;
+    font-size: xx-large !important;
+    vertical-align: middle !important;
+}
+
+
+@media screen and (max-width: 812px) {
+    .my-resume-start {
+        text-align: justify;
+    }
+}
+
+// @media screen and (min-width:813px) {
+// }

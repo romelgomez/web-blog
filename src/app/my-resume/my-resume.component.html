@@ -5,15 +5,18 @@
       <mat-card-title>My Resume</mat-card-title>
       <mat-card-subtitle>In lines of code</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="/assets/surf.jpg" alt="Photo of surfboard">
+    <img mat-card-image src="/assets/images/coffe.svg" alt="Photo of surfboard">
+
+
     <mat-card-content>
   
       <!-- <p>
           {{ 'myResume.HELLO' | translate:param }}
       </p>
    -->
-      <p>
-        Hi there! I’m Romel. And I see my self as web developer, programer. Currently, I into pick up Angular 5.x, RxJS, and Material. And at some point, I write code to use AngularJS 1.x, Algolia, Cloudinary, Node, Express, Firebase, Gulp, TypeScript, Bootstrap, jQuery, CakePHP 2.x, Openshift, GoLang, PHP, JAVA, MySql, Google App Engine for JAVA, Spring MVC 3.X, 2checkout.
+      <p class="my-resume-start">
+        {{ 'myResume.start' | translate }}
+
       </p>
   
       <mat-accordion>
@@ -37,6 +40,7 @@
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title>
+              <mat-icon>http</mat-icon>
               <span class="resume-select-panel-title">Repositories</span>               
             </mat-panel-title>
             <mat-panel-description>
@@ -77,6 +81,7 @@
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title>
+                <mat-icon>import_contacts</mat-icon>
               <span class="resume-select-panel-title">Courses</span>               
             </mat-panel-title>
             <mat-panel-description>
@@ -95,9 +100,8 @@
       </mat-accordion>
   
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
+    <mat-card-actions class="my-resume-actions">
+      <button mat-button class="get-in-touch-button">Get in touch!</button>
     </mat-card-actions>
   </mat-card>
 </div>
