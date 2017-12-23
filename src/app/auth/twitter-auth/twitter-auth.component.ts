@@ -8,7 +8,7 @@ import * as firebase from 'firebase/app';
 @Component({
   selector: 'app-twitter-auth',
   templateUrl: './twitter-auth.component.html',
-  styleUrls: ['./twitter-auth.component.css']
+  styleUrls: ['./twitter-auth.component.scss']
 })
 export class TwitterAuthComponent  implements OnInit {
 

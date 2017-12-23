@@ -18,6 +18,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 // import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { AuthModule } from './auth';
+import { PasswordModule } from './auth/password';
 
 // Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -74,9 +75,10 @@ const appRoutes: Routes = [
     FlexLayoutModule,
     MatGridListModule,
     AuthModule,
+    PasswordModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      // { enableTracing: true } // <-- debugging purposes only
     ),
     // AngularFireModule.initializeApp(environment.firebase),
     // // imports firebase/auth, only needed for auth features

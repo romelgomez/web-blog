@@ -6,11 +6,11 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 
 @Component({
-  selector: 'app-password-auth',
-  templateUrl: './password-auth.component.html',
-  styleUrls: ['./password-auth.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
 })
-export class PasswordAuthComponent implements OnInit {
+export class LoginComponent implements OnInit {
 
   loginForm = new FormGroup ({
     email: new FormControl('', [Validators.required, Validators.email]),

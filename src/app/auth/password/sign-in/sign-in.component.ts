@@ -5,11 +5,11 @@ import { Observable } from 'rxjs/Observable';
 
 
 @Component({
-  selector: 'app-password-auth-sign-in',
-  templateUrl: './password-auth-sign-in.component.html',
-  styleUrls: ['./password-auth-sign-in.component.css']
+  selector: 'app-sign-in',
+  templateUrl: './sign-in.component.html',
+  styleUrls: ['./sign-in.component.scss']
 })
-export class PasswordAuthSignInComponent implements OnInit {
+export class SignInComponent implements OnInit {
 
   signInForm = new FormGroup ({
     email: new FormControl('', [Validators.required, Validators.email]),

@@ -11,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.css']
+  styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent {
 
