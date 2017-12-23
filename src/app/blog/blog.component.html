@@ -1,7 +1,16 @@
 <div class="blog-container">
 
-   
-      
+    <mat-list>
+        <mat-list-item> <app-twitter-auth [user]="user"></app-twitter-auth> </mat-list-item>
+        <mat-list-item> <app-google-auth [user]="user" ></app-google-auth> </mat-list-item>
+        <mat-list-item> <app-facebook-auth [user]="user" ></app-facebook-auth> </mat-list-item>
+    </mat-list>
+    <app-logout [user]="user"></app-logout>
+    <hr>
+
+    <app-auth-state [user]="user" ></app-auth-state>
+
+    <hr>
 
     <h1>Blog Component</h1>
     

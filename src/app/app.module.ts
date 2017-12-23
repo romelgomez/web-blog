@@ -17,6 +17,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 // import { AngularFireModule } from 'angularfire2';
 // import { AngularFireAuthModule } from 'angularfire2/auth';
 
+import { AuthModule } from './auth';
+
 // Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
@@ -71,6 +73,7 @@ const appRoutes: Routes = [
     CdkTableModule,
     FlexLayoutModule,
     MatGridListModule,
+    AuthModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
