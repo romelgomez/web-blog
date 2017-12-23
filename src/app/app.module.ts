@@ -39,9 +39,11 @@ import { AppComponent } from './app.component';
 import { MyResumeComponent } from './my-resume/my-resume.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BlogComponent } from './blog/blog.component';
+import { ContactComponent } from './contact/contact.component';
 
 const appRoutes: Routes = [
   { path: 'my-resume',     component: MyResumeComponent },
+  { path: 'contact',       component: ContactComponent },
   { path: '',              component: BlogComponent },
   { path: '**',            component: PageNotFoundComponent }
 ];
@@ -51,7 +53,8 @@ const appRoutes: Routes = [
     AppComponent,
     MyResumeComponent,
     PageNotFoundComponent,
-    BlogComponent
+    BlogComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
