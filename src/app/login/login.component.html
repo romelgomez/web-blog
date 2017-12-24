@@ -1,0 +1,36 @@
+<div class="login-container">
+    <mat-card>
+        <app-sign-in></app-sign-in>
+    </mat-card>
+    
+     <br> 
+    
+    <mat-card>
+      <app-auth-login></app-auth-login>
+    </mat-card>
+    
+    <br> 
+    
+    <mat-card>
+        <mat-list>
+            <mat-list-item> <app-twitter-auth [user]="user"></app-twitter-auth> </mat-list-item>
+            <mat-list-item> <app-google-auth [user]="user" ></app-google-auth> </mat-list-item>
+            <mat-list-item> <app-facebook-auth [user]="user" ></app-facebook-auth> </mat-list-item>
+        </mat-list>    
+    </mat-card>
+    
+    <br> 
+    
+    <mat-card>
+      <h3>Logout:</h3>
+      <app-logout [user]="user"></app-logout>      
+    </mat-card>
+    
+    <br> 
+    
+    <mat-card>
+      <h4>Auth state:</h4> 
+      <app-auth-state [user]="user" ></app-auth-state>
+    </mat-card>
+    
+</div>
