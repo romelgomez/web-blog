@@ -23,7 +23,7 @@
     
     <mat-card>
       <h3>Logout:</h3>
-      <app-logout [user]="user"></app-logout>      
+      <button *ngIf="user | async;" mat-raised-button appRgLogout>Logout</button>
     </mat-card>
     
     <br> 
