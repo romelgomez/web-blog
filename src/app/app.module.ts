@@ -18,7 +18,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 // import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { AuthModule } from './auth';
-import { PasswordModule } from './auth/password';
+// import { PasswordModule } from './auth/password';
 
 // Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -75,7 +75,7 @@ const appRoutes: Routes = [
     FlexLayoutModule,
     MatGridListModule,
     AuthModule,
-    PasswordModule,
+    // PasswordModule,
     RouterModule.forRoot(
       appRoutes,
       // { enableTracing: true } // <-- debugging purposes only

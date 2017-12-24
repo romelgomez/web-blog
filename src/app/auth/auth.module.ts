@@ -31,7 +31,7 @@ import { FlexLayoutModule } from '@angular/flex-layout'; // Responsive features
     FlexLayoutModule,
     PasswordModule
   ],
-  exports: [ GoogleAuthComponent, FacebookAuthComponent, TwitterAuthComponent, LogoutComponent, AuthStateComponent ],
+  exports: [ GoogleAuthComponent, FacebookAuthComponent, TwitterAuthComponent, LogoutComponent, AuthStateComponent,  PasswordModule ],
   declarations: [
     // AuthComponent,
     GoogleAuthComponent,
