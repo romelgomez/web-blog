@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
-// import { AngularFireAuth } from 'angularfire2/auth';
 import { Observable } from 'rxjs/Observable';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material';
@@ -8,6 +7,10 @@ import { MatIconRegistry } from '@angular/material';
 import { HttpClient } from '@angular/common/http';
 
 import { TranslateService} from '@ngx-translate/core';
+
+import { AngularFireAuth } from 'angularfire2/auth';
+// For interface only - Do not import from 'firebase' as you'd lose the tree shaking benefits
+import * as firebase from 'firebase/app';
 
 @Component({
   selector: 'app-root',
@@ -17,9 +20,19 @@ import { TranslateService} from '@ngx-translate/core';
 })
 export class AppComponent {
 
+  public user: Observable<firebase.User>;
+
   public currentLang: string;
 
-  constructor(http: HttpClient, iconReg: MatIconRegistry, sanitizer: DomSanitizer, private translate: TranslateService) {
+  constructor(
+    private http: HttpClient,
+    private iconReg: MatIconRegistry,
+    private sanitizer: DomSanitizer,
+    private translate: TranslateService,
+    private afAuth: AngularFireAuth) {
+
+    this.user = afAuth.authState;
+
     iconReg
     .addSvgIcon('github', sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/github.svg'))
     .addSvgIcon('google', sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/google.svg'))

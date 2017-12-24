@@ -1,11 +1,7 @@
 import { Component } from '@angular/core';
-import { AngularFireAuth } from 'angularfire2/auth';
 import { Observable } from 'rxjs/Observable';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material';
-
-// Do not import from 'firebase' as you'd lose the tree shaking benefits
-import * as firebase from 'firebase/app';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -15,12 +11,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AuthComponent {
 
-  user: Observable<firebase.User>;
-
-  constructor(private afAuth: AngularFireAuth, http: HttpClient, iconReg: MatIconRegistry, sanitizer: DomSanitizer) {
-
-    this.user = afAuth.authState;
-
+  constructor(http: HttpClient, iconReg: MatIconRegistry, sanitizer: DomSanitizer) {
     iconReg.addSvgIcon('google', sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/google.svg'))
            .addSvgIcon('facebook', sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/facebook.svg'))
            .addSvgIcon('twitter', sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/twitter.svg'));

@@ -11,7 +11,14 @@
     <mat-nav-list class="sidebar-mat-nav-list">
       <a mat-list-item routerLink="/my-resume" > My Resume </a>
       <a mat-list-item routerLink="/contact" > Contact </a>
-      <a mat-list-item routerLink="/login" > Login </a>
+
+      <div *ngIf="user | async; let user; else showLoginURL">
+          <a mat-list-item appRgLogout> Logout </a>
+      </div> 
+      <ng-template #showLoginURL>
+          <a mat-list-item routerLink="/login" > Login </a>
+      </ng-template>
+
     </mat-nav-list>
 
 

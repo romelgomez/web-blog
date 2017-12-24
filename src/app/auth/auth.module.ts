@@ -10,7 +10,6 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../../environments/environment';
 import { PasswordModule } from './password';
 import { RgLogoutDirective } from './logout/rg-logout.directive';
-import { AuthStateComponent } from './auth-state/auth-state.component';
 import { GoogleAuthComponent } from './google-auth/google-auth.component';
 import { FacebookAuthComponent } from './facebook-auth/facebook-auth.component';
 import { TwitterAuthComponent } from './twitter-auth/twitter-auth.component';
@@ -35,13 +34,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     GoogleAuthComponent,
     FacebookAuthComponent,
     TwitterAuthComponent,
-    AuthStateComponent,
     PasswordModule,
     RgLogoutDirective
   ],
   declarations: [
     GoogleAuthComponent,
-    AuthStateComponent,
     FacebookAuthComponent,
     TwitterAuthComponent,
     RgLogoutDirective

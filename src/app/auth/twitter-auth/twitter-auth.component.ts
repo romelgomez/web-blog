@@ -12,8 +12,6 @@ import * as firebase from 'firebase/app';
 })
 export class TwitterAuthComponent  implements OnInit {
 
-  @Input() user: Observable<firebase.User>;
-
   private provider: firebase.auth.TwitterAuthProvider;
 
   constructor(private afAuth: AngularFireAuth) {}

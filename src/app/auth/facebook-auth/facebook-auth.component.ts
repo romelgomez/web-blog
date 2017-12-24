@@ -12,8 +12,6 @@ import * as firebase from 'firebase/app';
 })
 export class FacebookAuthComponent implements OnInit {
 
-  @Input() user: Observable<firebase.User>;
-
   private provider: firebase.auth.FacebookAuthProvider;
 
   constructor(private afAuth: AngularFireAuth) {}

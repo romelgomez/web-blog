@@ -12,8 +12,6 @@ import * as firebase from 'firebase/app';
 })
 export class GoogleAuthComponent {
 
-  @Input() user: Observable<firebase.User>;
-
   constructor(private afAuth: AngularFireAuth) {}
 
   signInWithPopup() {
