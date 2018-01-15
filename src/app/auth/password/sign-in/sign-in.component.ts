@@ -51,4 +51,9 @@ export class SignInComponent implements OnInit {
     }
   }
 
+  log () {
+    console.log('Routes: ', JSON.stringify(this.signInForm, undefined, 2));
+  }
+
+
 }

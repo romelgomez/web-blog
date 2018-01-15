@@ -13,6 +13,7 @@ import { RgLogoutDirective } from './logout/rg-logout.directive';
 import { GoogleAuthComponent } from './google-auth/google-auth.component';
 import { FacebookAuthComponent } from './facebook-auth/facebook-auth.component';
 import { TwitterAuthComponent } from './twitter-auth/twitter-auth.component';
+import { AuthComponent } from './auth.component';
 
 // MATERIAL
 import { MatIconModule, MatButtonModule } from '@angular/material';
@@ -35,13 +36,15 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FacebookAuthComponent,
     TwitterAuthComponent,
     PasswordModule,
-    RgLogoutDirective
+    RgLogoutDirective,
+    AuthComponent
   ],
   declarations: [
     GoogleAuthComponent,
     FacebookAuthComponent,
     TwitterAuthComponent,
-    RgLogoutDirective
+    RgLogoutDirective,
+    AuthComponent
   ]
 })
 export class AuthModule {}
