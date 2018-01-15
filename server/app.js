@@ -20,7 +20,7 @@ app.use(bodyParser.json()); // parse application/json
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
 app.use(methodOverride());
 
-// require('./routes')(app);
+require('./routes')(app);
 // require('./cloudinary/cloudinary')(app);
 // require('./algolia/publicationsIndex');
 
