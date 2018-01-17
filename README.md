@@ -10,5 +10,7 @@
 
 https://angular.io/guide/deployment
 
+
+ng build --prod --build-optimizer
 ----
 

@@ -44,13 +44,17 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.component';
 
 const appRoutes: Routes = [
-  { path: 'my-resume',     component: MyResumeComponent },
-  { path: 'login',         component: LoginComponent },
-  { path: 'contact',       component: ContactComponent },
-  { path: '',              component: BlogComponent },
-  { path: '**',            component: PageNotFoundComponent }
+  { path: 'my-resume',                    component: MyResumeComponent },
+  { path: 'login',                        component: LoginComponent },
+  { path: 'contact',                      component: ContactComponent },
+  { path: 'terms-of-service',             component: TermsOfServiceComponent },
+  { path: 'privacy-policy',               component: PrivacyPolicyComponent },
+  { path: '',                             component: BlogComponent },
+  { path: '**',                           component: PageNotFoundComponent }
 ];
 
 @NgModule({
@@ -60,7 +64,9 @@ const appRoutes: Routes = [
     PageNotFoundComponent,
     BlogComponent,
     ContactComponent,
-    LoginComponent
+    LoginComponent,
+    PrivacyPolicyComponent,
+    TermsOfServiceComponent
   ],
   imports: [
     BrowserModule,
