@@ -19,6 +19,7 @@ import { AuthComponent } from './auth.component';
 import { MatIconModule, MatButtonModule } from '@angular/material';
 // Responsive features
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { GithubAuthComponent } from './github-auth/github-auth.component';
 
 @NgModule({
   imports: [
@@ -35,6 +36,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     GoogleAuthComponent,
     FacebookAuthComponent,
     TwitterAuthComponent,
+    GithubAuthComponent,
     PasswordModule,
     RgLogoutDirective,
     AuthComponent
@@ -44,7 +46,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FacebookAuthComponent,
     TwitterAuthComponent,
     RgLogoutDirective,
-    AuthComponent
+    AuthComponent,
+    GithubAuthComponent
   ]
 })
 export class AuthModule {}

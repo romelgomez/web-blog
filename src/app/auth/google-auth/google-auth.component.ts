@@ -8,7 +8,7 @@ import * as firebase from 'firebase/app';
 @Component({
   selector: 'app-google-auth',
   templateUrl: './google-auth.component.html',
-  styleUrls: ['./google-auth.component.css']
+  styleUrls: ['./google-auth.component.scss']
 })
 export class GoogleAuthComponent {
 
