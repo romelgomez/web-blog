@@ -33,27 +33,21 @@
                 <mat-icon [ngClass]="{'invalid': signInForm.invalid, 'valid': signInForm.valid}">lens</mat-icon> &nbsp; <b>Form:</b> &nbsp; {{ signInForm.invalid ? 'Invalid' : 'Valid' }}
                 <mat-divider></mat-divider>
             </mat-list-item>
-            <mat-divider></mat-divider>
             <mat-list-item>
                 <mat-icon [ngClass]="{'invalid': email().invalid, 'valid': email().valid }">lens</mat-icon> &nbsp; <b>Email:</b> &nbsp; {{ email().invalid ? 'Invalid' : 'Valid' }} &nbsp; &nbsp; <b>Validators:</b>						&nbsp; &nbsp; (required,email)
-
-
+                <mat-divider></mat-divider>
             </mat-list-item>
-            <mat-divider></mat-divider>
             <mat-list-item>
                 <mat-icon [ngClass]="{'invalid': password().invalid, 'valid': password().valid }">lens</mat-icon> &nbsp; <b>Password:</b> &nbsp; {{ password().invalid ? 'Invalid' : 'Valid' }} &nbsp; &nbsp; <b>Validators:</b>						&nbsp; &nbsp; (areEqual)
-
+                <mat-divider></mat-divider>
             </mat-list-item>
-            <mat-divider></mat-divider>
             <mat-list-item>
                 <mat-icon [ngClass]="{'invalid': original().invalid, 'valid': original().valid }">lens</mat-icon> &nbsp; <b>Original Password:</b> &nbsp; {{ original().invalid ? 'Invalid' : 'Valid' }} &nbsp; &nbsp;
                 <b>Validators:</b> &nbsp; &nbsp; (required,minLength)
-
+                <mat-divider></mat-divider>
             </mat-list-item>
-            <mat-divider></mat-divider>
             <mat-list-item>
                 <mat-icon [ngClass]="{'invalid': copy().invalid, 'valid': copy().valid }">lens</mat-icon> &nbsp; <b>Copy Password:</b> &nbsp; {{ copy().invalid ? 'Invalid' : 'Valid' }} &nbsp; &nbsp; <b>Validators:</b>						&nbsp; &nbsp; (required)
-
             </mat-list-item>
 
         </mat-list>
