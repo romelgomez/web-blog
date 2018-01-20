@@ -6,7 +6,13 @@ import { SignInComponent } from './sign-in/sign-in.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { MatButtonModule, MatCardModule, MatTabsModule, MatListModule, MatInputModule } from '@angular/material';
+import { MatButtonModule,
+   MatCardModule,
+   MatTabsModule,
+   MatListModule,
+   MatInputModule,
+   MatDividerModule,
+   MatIconModule } from '@angular/material';
 /* import { MatCardModule, MatTabsModule, MatListModule, MatInputModule } from '@angular/material'; */
 
     // MatCardModule,
@@ -21,7 +27,10 @@ import { MatButtonModule, MatCardModule, MatTabsModule, MatListModule, MatInputM
     CommonModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDividerModule,
+    MatIconModule,
+    MatListModule
   ],
   exports: [
     LoginComponent,

@@ -7,6 +7,26 @@ src/app/auth/password/sign-in/sign-in.component.html(29,26): : Property 'control
 src/app/auth/password/sign-in/sign-in.component.html(29,26): : Property 'controls' does not exist on type 'AbstractControl'.
 
 
+<form [formGroup]="aForm" (ngSubmit)="onSubmit()"  novalidate>
+    <mat-form-field>
+        <input matInput placeholder="Email" class="form-control" formControlName="email">
+        <mat-error *ngIf="aForm.get('email').value === '' && (aForm.get('email').dirty || aForm.get('email').touched)">
+            La dirección de correo electrónico es obligatoria.
+        </mat-error>
+        <mat-error *ngIf="aForm.get('email').status === 'INVALID' && (aForm.get('email').dirty || aForm.get('email').touched)">
+            Por favor, introduce una dirección de correo electrónico válida.
+        </mat-error>
+    </mat-form-field>
+  
+  
+  
+    <button mat-raised-button type="submit"  [disabled]="aForm.status === 'INVALID'" >Continuar</button>            
+  </form>
+
+
+****************************
+
+
 <form [formGroup]="signInForm" (ngSubmit)="onSubmit()"  novalidate>
     <mat-form-field>
         <input matInput placeholder="Email" class="form-control" formControlName="email">
