@@ -100,13 +100,15 @@ export class SignInComponent implements OnInit {
   }
 
   // onSubmit() {
+  //   alert('Email: ' + this.email().value + ', Password: ' + this.original().value);
+
   //   // console.log('aForm.value: ' + this.aForm.get('email').value );
   //   // console.log('aForm.value: ' + this.aForm.get('passwords.password').value );
 
-  //   this.afAuth.auth.signInWithEmailAndPassword( this.aForm.get('email').value, this.aForm.get('password.original').value )
-  //     .catch(error =>  {
-  //       alert(error.message);
-  //     })  ;
+  //   // this.afAuth.auth.signInWithEmailAndPassword( this.aForm.get('email').value, this.aForm.get('password.original').value )
+  //   //   .catch(error =>  {
+  //   //     alert(error.message);
+  //   //   })  ;
 
   // }
 
