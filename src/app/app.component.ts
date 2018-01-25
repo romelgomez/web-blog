@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { DomSanitizer } from '@angular/platform-browser';
-import { MatIconRegistry } from '@angular/material';
+import { MatIconRegistry, MatSidenav } from '@angular/material';
 
 import { HttpClient } from '@angular/common/http';
 
@@ -19,6 +19,8 @@ import * as firebase from 'firebase/app';
   viewProviders: [ MatIconRegistry ]
 })
 export class AppComponent {
+
+  @ViewChild('sidenav') sidenav: MatSidenav;
 
   public user: Observable<firebase.User>;
 
@@ -53,6 +55,11 @@ export class AppComponent {
   setDefaultLang (lang: string) {
     this.translate.use(lang);
     this.currentLang = lang;
+  }
+
+
+  closeSidenav() {
+    this.sidenav.close();
   }
 
 }
