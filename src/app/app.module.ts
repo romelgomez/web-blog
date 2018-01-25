@@ -35,6 +35,7 @@ import {
  } from '@angular/material';
 import { CdkTableModule } from '@angular/cdk/table';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { LayoutModule } from '@angular/cdk/layout';
 
 // App
 // import { environment } from '../environments/environment';
@@ -84,6 +85,7 @@ const appRoutes: Routes = [
     FlexLayoutModule,
     MatGridListModule,
     AuthModule,
+    LayoutModule,
     // PasswordModule,
     RouterModule.forRoot(
       appRoutes,
