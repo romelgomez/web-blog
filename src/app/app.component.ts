@@ -36,12 +36,12 @@ export class AppComponent {
     this.user = afAuth.authState;
 
     iconReg
-    .addSvgIcon('github', sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/github.svg'))
-    .addSvgIcon('google', sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/google.svg'))
-    .addSvgIcon('facebook', sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/facebook.svg'))
-    .addSvgIcon('twitter', sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/twitter.svg'))
-    .addSvgIcon('uk', sanitizer.bypassSecurityTrustResourceUrl('./assets/flags/united-kingdom.svg'))
-    .addSvgIcon('venezuela', sanitizer.bypassSecurityTrustResourceUrl('./assets/flags/venezuela.svg'));
+    .addSvgIcon('github', sanitizer.bypassSecurityTrustResourceUrl('https://res.cloudinary.com/peruve/image/upload/q_auto:low/v1516927508/github_kodzfn.svg'))
+    .addSvgIcon('google', sanitizer.bypassSecurityTrustResourceUrl('https://res.cloudinary.com/peruve/image/upload/q_auto:low/v1516927507/google_a42v3v.svg'))
+    .addSvgIcon('facebook', sanitizer.bypassSecurityTrustResourceUrl('https://res.cloudinary.com/peruve/image/upload/q_auto:low/v1516927508/facebook_gsq5lo.svg'))
+    .addSvgIcon('twitter', sanitizer.bypassSecurityTrustResourceUrl('https://res.cloudinary.com/peruve/image/upload/q_auto:low/v1516927507/twitter_delccf.svg'))
+    .addSvgIcon('uk', sanitizer.bypassSecurityTrustResourceUrl('https://res.cloudinary.com/peruve/image/upload/q_auto:low/v1516927490/united-kingdom_shqonm.svg'))
+    .addSvgIcon('venezuela', sanitizer.bypassSecurityTrustResourceUrl('https://res.cloudinary.com/peruve/image/upload/q_auto:low/v1516927490/venezuela_gndfbj.svg'));
 
     // this language will be used as a fallback when a translation isn't found in the current language
     translate.setDefaultLang('en');
