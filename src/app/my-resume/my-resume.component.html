@@ -10,16 +10,39 @@
 
     <mat-card-content>
   
-      <!-- <p>
+      <!-- 
+        <p>
           {{ 'myResume.HELLO' | translate:param }}
-      </p>
-   -->
+        </p>
+     -->
       <p class="my-resume-start">
-        {{ 'myResume.start' | translate }}
+        <!-- {{ 'myResume.start' | translate }} -->
+
+        Programmer, web developer, mobile developer (With Ionic). I have a least 8 years working in web development. I love riding a BMX, and hot coffee with chocolate.
 
       </p>
-  
+
       <mat-accordion>
+          <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <mat-icon>polymer</mat-icon>
+                     <span class="resume-select-panel-title">My tech stack includes</span>
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    <!-- <span class="resume-select-description">Very formal</span> -->
+                  </mat-panel-description>
+              </mat-expansion-panel-header>
+            
+              <mat-list dense>
+                  <mat-list-item *ngFor="let t of stack" >
+                    <mat-icon>keyboard_arrow_right</mat-icon>  
+                    {{t}}
+                  </mat-list-item>
+              </mat-list>              
+      
+        </mat-expansion-panel>   
+
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title>
