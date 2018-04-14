@@ -31,7 +31,8 @@ import {
   MatListModule,
   MatCardModule,
   MatExpansionModule,
-  MatGridListModule
+  MatGridListModule,
+  MatTabsModule
  } from '@angular/material';
 import { CdkTableModule } from '@angular/cdk/table';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -48,8 +49,17 @@ import { LoginComponent } from './login/login.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.component';
 
+// Services
+import { AuthService } from './auth/guards/auth.service';
+import { AuthGuardService as AuthGuard } from './auth/guards/auth-guard.service';
+import { AccountComponent } from './account/account.component';
+
 const appRoutes: Routes = [
   { path: 'my-resume',                    component: MyResumeComponent },
+  { path: 'account',
+    component: AccountComponent,
+    canActivate: [AuthGuard]
+  },
   { path: 'login',                        component: LoginComponent },
   { path: 'contact',                      component: ContactComponent },
   { path: 'terms-of-service',             component: TermsOfServiceComponent },
@@ -59,6 +69,10 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
+  providers : [
+    AuthGuard,
+    AuthService
+  ],
   declarations: [
     AppComponent,
     MyResumeComponent,
@@ -67,7 +81,8 @@ const appRoutes: Routes = [
     ContactComponent,
     LoginComponent,
     PrivacyPolicyComponent,
-    TermsOfServiceComponent
+    TermsOfServiceComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
@@ -84,6 +99,7 @@ const appRoutes: Routes = [
     CdkTableModule,
     FlexLayoutModule,
     MatGridListModule,
+    MatTabsModule,
     AuthModule,
     LayoutModule,
     // PasswordModule,
@@ -102,7 +118,6 @@ const appRoutes: Routes = [
     }
     })
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
