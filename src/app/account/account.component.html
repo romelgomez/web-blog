@@ -1,4 +1,16 @@
 <div class="container">
-  Account view 
+  <h1>Account view</h1>
+
+
+  <mat-card>
+    <h4>Auth state:</h4> 
+    <div *ngIf="user | async; let user; else loading">
+      <pre> {{user | json}} </pre>
+    </div> 
+    <ng-template #loading>Waiting for User Data...</ng-template>
+  </mat-card>
+  <br> 
+
+
 </div>
       

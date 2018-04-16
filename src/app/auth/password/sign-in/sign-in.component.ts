@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, ValidationErrors, AbstractControl} from '@angular/forms';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Observable } from 'rxjs/Observable';
+import { Router, ActivatedRoute } from '@angular/router';
 import * as _ from 'lodash';
 
 
@@ -12,11 +13,19 @@ import * as _ from 'lodash';
 })
 export class SignInComponent implements OnInit {
 
-  constructor(private afAuth: AngularFireAuth) {}
+  public signInForm: FormGroup;
 
-  signInForm: FormGroup;
+  private returnUrl: string;
+
+  constructor(
+    private afAuth: AngularFireAuth,
+    private route: ActivatedRoute,
+    private router: Router,
+  ) {}
 
   ngOnInit() {
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+
     this.signInForm =   new FormGroup ({
       email: new FormControl('', [ Validators.required, Validators.email ]),
       password : new FormGroup({
@@ -65,11 +74,6 @@ export class SignInComponent implements OnInit {
     return this.copy().hasError('required') ? 'Confirmar la contraseña es obligatorio.' : '';
   }
 
-
-  onSubmit() {
-    alert('Email: ' + this.email().value + ', Password: ' + this.original().value);
-  }
-
   // https://stackoverflow.com/a/45837475
   areEqual(abstractControl: AbstractControl): ValidationErrors | null {
     const values = [];
@@ -99,23 +103,20 @@ export class SignInComponent implements OnInit {
     }
   }
 
-  // onSubmit() {
-  //   alert('Email: ' + this.email().value + ', Password: ' + this.original().value);
+  onSubmit() {
 
-  //   // console.log('aForm.value: ' + this.aForm.get('email').value );
-  //   // console.log('aForm.value: ' + this.aForm.get('passwords.password').value );
+    this.afAuth.auth.createUserAndRetrieveDataWithEmailAndPassword( this.email().value, this.original().value)
+      .then((result) => this.successLogin(result))
+      .catch((error) => this.failedLogin(error));
 
-  //   // this.afAuth.auth.signInWithEmailAndPassword( this.aForm.get('email').value, this.aForm.get('password.original').value )
-  //   //   .catch(error =>  {
-  //   //     alert(error.message);
-  //   //   })  ;
+  }
 
-  // }
+  successLogin (result) {
+    this.router.navigateByUrl(this.returnUrl);
+  }
 
-
-  // log () {
-  //   console.log('Routes: ', JSON.stringify(this.aForm, undefined, 2));
-  // }
-
+  failedLogin (error) {
+    alert(error);
+  }
 
 }

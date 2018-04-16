@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { Observable } from 'rxjs/Observable';
+import { Router, ActivatedRoute } from '@angular/router';
 
 // Do not import from 'firebase' as you'd lose the tree shaking benefits
 import * as firebase from 'firebase/app';
@@ -17,21 +19,40 @@ export class LoginComponent implements OnInit {
     password: new FormControl('', [Validators.required])
   });
 
-  constructor(private afAuth: AngularFireAuth) {}
+  private returnUrl: string;
 
-  ngOnInit() {
+  constructor(
+    private afAuth: AngularFireAuth,
+    private route: ActivatedRoute,
+    private router: Router,
+  ) {}
 
+  ngOnInit () {
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
   onSubmit() {
-    console.log('loginForm.value: ' + this.loginForm.get('email').value );
-    console.log('loginForm.value: ' + this.loginForm.get('password').value );
+    // console.log('loginForm.value: ' + this.loginForm.get('email').value );
+    // console.log('loginForm.value: ' + this.loginForm.get('password').value );
 
-    this.afAuth.auth.signInWithEmailAndPassword( this.loginForm.get('email').value, this.loginForm.get('password').value )
-      .catch(error =>  {
-        alert(error.message);
-      })  ;
+    this.afAuth.auth.signInAndRetrieveDataWithEmailAndPassword( this.loginForm.get('email').value, this.loginForm.get('password').value )
+      .then((result) => this.successLogin(result))
+      .catch((error) => this.failedLogin(error));
 
+    // Will by temporarily deprecated
+    // this.afAuth.auth.signInWithEmailAndPassword(  )
+    //   .catch(error =>  {
+    //     alert(error.message);
+    //   });
+
+  }
+
+  successLogin (result) {
+    this.router.navigateByUrl(this.returnUrl);
+  }
+
+  failedLogin (error) {
+    alert(error);
   }
 
 }
