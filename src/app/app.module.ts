@@ -6,6 +6,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 
+// for todo list
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule, MatDividerModule } from '@angular/material';
+
+
+
 // Translate
 import { TranslateModule, TranslateLoader} from '@ngx-translate/core';
 // AoT requires an exported function for factories
@@ -53,6 +59,7 @@ import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.com
 import { AuthService } from './auth/guards/auth.service';
 import { AuthGuardService as AuthGuard } from './auth/guards/auth-guard.service';
 import { AccountComponent } from './account/account.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
 
 const appRoutes: Routes = [
   { path: 'my-resume',                    component: MyResumeComponent },
@@ -82,7 +89,8 @@ const appRoutes: Routes = [
     LoginComponent,
     PrivacyPolicyComponent,
     TermsOfServiceComponent,
-    AccountComponent
+    AccountComponent,
+    TodoListComponent
   ],
   imports: [
     BrowserModule,
@@ -102,6 +110,9 @@ const appRoutes: Routes = [
     MatTabsModule,
     AuthModule,
     LayoutModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatDividerModule,
     // PasswordModule,
     RouterModule.forRoot(
       appRoutes,

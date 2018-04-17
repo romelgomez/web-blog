@@ -2,6 +2,13 @@
   <h1>Account view</h1>
 
 
+  <app-todo-list></app-todo-list>
+
+  <br> 
+  <hr>
+  <br> 
+
+
   <mat-card>
     <h4>Auth state:</h4> 
     <div *ngIf="user | async; let user; else loading">
@@ -9,7 +16,6 @@
     </div> 
     <ng-template #loading>Waiting for User Data...</ng-template>
   </mat-card>
-  <br> 
 
 
 </div>

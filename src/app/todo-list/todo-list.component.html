@@ -1,0 +1,10 @@
+<form [formGroup]="todoForm" (ngSubmit)="onSubmit()" novalidate>
+
+  <mat-form-field>
+    <input matInput placeholder="To-to task" class="form-control" formControlName="todo">
+    <mat-error *ngIf="todo().invalid">{{todoErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button type="submit" [disabled]="todoForm.invalid">Save</button>
+
+</form>

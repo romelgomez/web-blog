@@ -49,6 +49,19 @@ module.exports = function(app) {
     defaultRoute(req, res);
   });
 
+  // TO-DO API
+  app.post('/api/to-do', function(req, res){
+    console.log('sabe one to-do ');    
+  });
+
+  app.get('/api/to-do', function(req, res){
+    console.log('Get all to-do');    
+  });
+
+  app.get('/api/to-do/:id', function(req, res){
+    console.log('get to-do by id:',req.params.id);    
+  });
+
   app.get('*', function(req, res){
     defaultRoute(req, res);
   });
