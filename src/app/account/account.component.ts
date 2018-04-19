@@ -13,28 +13,29 @@ import { ISubscription } from 'rxjs/Subscription';
 export class AccountComponent implements OnInit, OnDestroy {
 
   user: Observable<firebase.User>;
-  subscription: ISubscription;
+  // subscription: ISubscription;
 
   constructor(
     private afAuth: AngularFireAuth,
-    private router: Router,
+    // private router: Router,
   ) {
     this.user = afAuth.authState;
   }
 
   ngOnInit() {
-    this.subscription = this.user
-      .subscribe( user => this.islogged(user));
+    // console.log('this never happen');
+    // this.subscription = this.user
+    //   .subscribe( user => this.islogged(user));
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    // this.subscription.unsubscribe();
   }
 
-  islogged (user) {
-    if ( user == null) {
-      this.router.navigateByUrl('/');
-    }
-  }
+  // islogged (user) {
+  //   if ( user == null) {
+  //     this.router.navigateByUrl('/');
+  //   }
+  // }
 
 }
