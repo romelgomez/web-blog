@@ -223,6 +223,14 @@ THE SOFTWARE.
 MIT
 MIT
 
+@angular/platform-browser@5.2.10
+MIT
+MIT
+
+@angular/router@5.2.10
+MIT
+MIT
+
 @ngx-translate/http-loader@2.0.1
 MIT
 Copyright (c) 2016 Olivier Combe
@@ -256,14 +264,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
-@angular/platform-browser@5.2.10
-MIT
-MIT
-
-@angular/router@5.2.10
-MIT
-MIT
 
 angularfire2@5.0.0-rc.5-next
 MIT
